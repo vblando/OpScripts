@@ -45,6 +45,9 @@ echo "SLAVE=yes" >> /etc/sysconfig/network-scripts/ifcfg-ens1f0
 echo "USERCTL=no" >> /etc/sysconfig/network-scripts/ifcfg-ens1f0
 echo "MTU=9000" >> /etc/sysconfig/network-scripts/ifcfg-ens1f0
 
+# start the interfaces
+ifup bond1 && ifup enp130s0f0 && ifup ens1f0
+
 # stop and disable services
 systemctl stop firewalld && systemctl disable firewalld
 systemctl stop NetworkManager && systemctl disable NetworkManager
