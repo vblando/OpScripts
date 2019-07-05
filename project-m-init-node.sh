@@ -23,12 +23,12 @@ sed -i 'BOOTPROTO/d' /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
 sed -i 'DEFROUTE/d' /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
 sed -i 'NAME/d' /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
 sed -i 'ONBOOT/d' /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
-echo "ONBOOT=yes" > /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
-echo "BOOTPROTO=none" > /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
-echo "MASTER=bond1" > /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
-echo "SLAVE=yes" > /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
-echo "USERCTL=no" > /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
-echo "MTU=9000" > /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
+echo "ONBOOT=yes" >> /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
+echo "BOOTPROTO=none" >> /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
+echo "MASTER=bond1" >> /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
+echo "SLAVE=yes" >> /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
+echo "USERCTL=no" >> /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
+echo "MTU=9000" >> /etc/sysconfig/network-scripts/ifcfg-enp130s0f0
 
 # interface ens1f0
 sed -i 'IPV/d' /etc/sysconfig/network-scripts/ifcfg-ens1f0
@@ -38,12 +38,12 @@ sed -i 'BOOTPROTO/d' /etc/sysconfig/network-scripts/ifcfg-ens1f0
 sed -i 'DEFROUTE/d' /etc/sysconfig/network-scripts/ifcfg-ens1f0
 sed -i 'NAME/d' /etc/sysconfig/network-scripts/ifcfg-ens1f0
 sed -i 'ONBOOT/d' /etc/sysconfig/network-scripts/ifcfg-ens1f0
-echo "ONBOOT=yes" > /etc/sysconfig/network-scripts/ifcfg-ens1f0
-echo "BOOTPROTO=none" > /etc/sysconfig/network-scripts/ifcfg-ens1f0
-echo "MASTER=bond1" > /etc/sysconfig/network-scripts/ifcfg-ens1f0
-echo "SLAVE=yes" > /etc/sysconfig/network-scripts/ifcfg-ens1f0
-echo "USERCTL=no" > /etc/sysconfig/network-scripts/ifcfg-ens1f0
-echo "MTU=9000" > /etc/sysconfig/network-scripts/ifcfg-ens1f0
+echo "ONBOOT=yes" >> /etc/sysconfig/network-scripts/ifcfg-ens1f0
+echo "BOOTPROTO=none" >> /etc/sysconfig/network-scripts/ifcfg-ens1f0
+echo "MASTER=bond1" >> /etc/sysconfig/network-scripts/ifcfg-ens1f0
+echo "SLAVE=yes" >> /etc/sysconfig/network-scripts/ifcfg-ens1f0
+echo "USERCTL=no" >> /etc/sysconfig/network-scripts/ifcfg-ens1f0
+echo "MTU=9000" >> /etc/sysconfig/network-scripts/ifcfg-ens1f0
 
 # stop and disable services
 systemctl stop firewalld && systemctl disable firewalld
