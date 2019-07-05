@@ -48,4 +48,4 @@ echo "MTU=9000" > /etc/sysconfig/network-scripts/ifcfg-ens1f0
 systemctl stop firewalld && systemctl disable firewalld
 systemctl stop NetworkManager && systemctl disable NetworkManager
 sleep 5
-reboot
+# reboot
