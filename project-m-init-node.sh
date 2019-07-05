@@ -51,5 +51,5 @@ ifup bond1 && ifup enp130s0f0 && ifup ens1f0
 # stop and disable services
 systemctl stop firewalld && systemctl disable firewalld
 systemctl stop NetworkManager && systemctl disable NetworkManager
-sleep 5
-# reboot
+sleep 2
+reboot
