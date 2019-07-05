@@ -12,6 +12,7 @@ BOOTPROTO=none
 ONBOOT=yes
 BONDING_OPTS="mode=5 miimon=100"
 MTU=9000
+EOF
 
 # configure bond1 members
 # interface enp130s0f0
