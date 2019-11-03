@@ -1,6 +1,6 @@
 ## Sample script for deploying multiple instances 
 
-### Make sure you load your OpenStack Credentials before proceeding
+#### Make sure you load your OpenStack Credentials before proceeding
 
 ```$ source </path/to/your/openstack_creds.rc>```
 
