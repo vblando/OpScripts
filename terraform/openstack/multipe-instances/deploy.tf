@@ -1,6 +1,6 @@
 resource "openstack_compute_instance_v2" "<instance_name>" {
   count = "${var.count}"
-  name = "${format("<instance_name>", count.index+1)}"
+  name = "<instance_name>${count.index + 1}"
   image_name = "${var.image}"
   availability_zone = "${var.availability_zone}"
   flavor_name = "${var.flavor}"
