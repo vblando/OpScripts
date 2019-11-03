@@ -4,19 +4,19 @@
 
 ```$ source </path/to/your/openstack_creds.rc>```
 
-### Initialize Terraform 
+#### Initialize Terraform 
 
 ```$ terraform init ```
 
-### Double check your configs
+#### Double check your configs
 
 ``` $ terraform plan ```
 
-### Deploy
+#### Deploy
 
 ``` $ terraform apply ```
 
-### Once done, check if the instance(s) are deployed without error and you can connect to it via SSH
+#### Once done, check if the instance(s) are deployed without error and you can connect to it via SSH
 
 ```openstack server list```
 
