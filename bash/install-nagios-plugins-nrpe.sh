@@ -1,4 +1,6 @@
 #!/bin/bash
+#
+# by vlad
 
 # add the user and groups
 useradd nagios && groupadd nagcmd && usermod -aG nagcmd nagios
