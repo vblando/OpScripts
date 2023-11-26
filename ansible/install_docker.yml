@@ -1,0 +1,49 @@
+---
+- name: Install Docker on Ubuntu and add user to Docker group
+  hosts: docker-host  # update your host file with your docker host
+  become: yes  # Run tasks with sudo
+
+  tasks:
+    - name: Update apt package cache
+      apt:
+        update_cache: yes
+
+    - name: Install required packages for Docker
+      apt:
+        name:
+          - apt-transport-https
+          - ca-certificates
+          - curl
+          - software-properties-common
+
+    - name: Add Docker GPG key
+      apt_key:
+        url: https://download.docker.com/linux/ubuntu/gpg
+        state: present
+
+    - name: Add Docker APT repository
+      apt_repository:
+        repo: deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable
+        state: present
+
+    - name: Update apt package cache (again with Docker repository)
+      apt:
+        update_cache: yes
+
+    - name: Install Docker
+      apt:
+        name: docker-ce
+        state: present
+
+    - name: Ensure Docker service is started and enabled
+      systemd:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Add current user to the Docker group
+      user:
+        name: "{{ ansible_env.SUDO_USER }}"
+        groups: docker
+        append: yes
+      become: yes
